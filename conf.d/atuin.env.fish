@@ -1,1 +1,1 @@
-source "$HOME/.atuin/bin/env.fish"
+source "$HOME/.local/share/atuin/bin/env.fish"
