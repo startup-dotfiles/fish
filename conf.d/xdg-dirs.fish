@@ -11,6 +11,11 @@ set -gx XDG_DATA_HOME   "$HOME/.local/share"  # User-specific data files (analog
 set -gx XDG_STATE_HOME  "$HOME/.local/state"  # User-specific state files (analogous to /var/lib)
 # XDG_RUNTIME_DIR # User-specific non-essential runtime files and other file objects
 
+## https://gitlab.freedesktop.org/xdg/xdg-spec/-/issues/14
+## https://github.com/search?q=XDG_BIN_HOME&type=code
+set -gx XDG_BIN_HOME    "$HOME/.local/bin"
+
+
 ## System directories
 # XDG_CONFIG_DIRS # List of directories separated by : (analogous to PATH)
 # XDG_DATA_DIRS   # List of directories separated by : (analogous to PATH)
