@@ -34,11 +34,11 @@ abbr -a .4 'cd ../../../..'
 abbr -a .5 'cd ../../../../..'
 
 # Show file list
-abbr -a l 'eza -lh --icons=auto --sort=name --group-directories-first' # long list
-abbr -a ls 'eza -1  --icons=auto --sort=name --group-directories-first' # short list
-abbr -a la 'eza -lha --icons=auto --sort=name --group-directories-first' # long list (all)
-abbr -a ld 'eza -lhD --icons=auto --sort=name --group-directories-first' # long list (only dirs)
-abbr -a lt 'eza --tree --icons=auto' # list folder as tree
+abbr -a l  'eza -lh  --sort=name --group-directories-first' # long list
+abbr -a ls 'eza -1   --sort=name --group-directories-first' # short list
+abbr -a la 'eza -lha --sort=name --group-directories-first' # long list (all)
+abbr -a ld 'eza -lhD --sort=name --group-directories-first' # long list (only dirs)
+abbr -a lt 'eza --tree' # list folder as tree
 
 # Package manager
 alias un='$aurhelper -Rns' # uninstall package
