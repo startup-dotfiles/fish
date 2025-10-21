@@ -10,6 +10,28 @@ git clone https://github.com/startup-dotfiles/fish $HOME/.config/fish
 rm -r README.md LICENSE assets/ .git/ .gitignore
 ```
 
+## Dependencies
+
+> [!NOTE]
+> These dependencies are not fixed and may change as the configuration is updated;
+> if you don't need some of the tools, comment out the related entries in the configuration files.
+
+- Terminal emulator: [kitty](https://github.com/kovidgoyal/kitty)
+- CLIs
+  - [fastfetch](https://github.com/fastfetch-cli/fastfetch): fetching system information and displaying it in a visually appealing way.
+  - [eza](https://github.com/eza-community/eza): A modern alternative to `ls`.
+  - [bat](https://github.com/sharkdp/bat): A cat(1) clone with wings.
+  - [zoxide](https://github.com/ajeetdsouza/zoxide): A smarter cd command.
+  - [trash-cli](https://github.com/andreafrancia/trash-cli): Command Line Interface to FreeDesktop.org Trash.
+  - [direnv](https://github.com/direnv/direnv): unclutter your .profile.
+  - [yay](https://github.com/Jguer/yay): Yet another Yogurt - An AUR Helper written in Go. (only Arch Linux)
+  - [paru](https://github.com/Morganamilo/paru): Feature packed AUR helper. (only Arch Linux)
+- TUIs
+  - [atuin](https://github.com/atuinsh/atuin): Magical shell history.
+- Scripts
+  - [pokego](https://github.com/rubiin/pokego): display Pokémon sprites in color directly in your terminal.
+  - [starship](https://github.com/starship/starship): The minimal, blazing-fast, and infinitely customizable prompt for any shell!
+
 ## Completions
 
 ```sh
