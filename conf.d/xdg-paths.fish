@@ -35,6 +35,9 @@
 # - $HOME/.git-credentials -> $XDG_CONFIG_HOME/git/credentials
 # - $HOME/.gitk            -> $XDG_CONFIG_HOME/git/gitk
 
+# Partial migration: some files are still created in $HOME/.pki
+# See https://bugzilla.mozilla.org/show_bug.cgi?id=818686#c11
+# $HOME/.pki -> $XDG_DATA_HOME/pki
 
 # Aliases
 alias mvn="mvn -gs $XDG_CONFIG_HOME/maven/settings.xml"
@@ -56,16 +59,19 @@ set -gx XCURSOR_PATH "/usr/share/icons:$XDG_DATA_HOME/icons"
 set -gx GTK2_RC_FILES "$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 
 ## bash
-# original value: $HOME/.bash_history
-set -gx HISTFILE "$XDG_STATE_HOME/bash_history" # history
 # - https://savannah.gnu.org/patch/index.php?10431 (Open)
+# - https://savannah.gnu.org/support/?108134
+# original value: $HOME/.bash_history
+#                 $HOME/.bash_profile
+#                 $HOME/.bashrc
+set -gx HISTFILE "$XDG_STATE_HOME/bash_history" # history
 
-# z
+## z
 # https://github.com/rupa/z/issues/267 (Open)
 # original value: $HOME/.z/
 set -gx _Z_DATA "$XDG_DATA_HOME/z"
 
-# ncurses
+## ncurses
 # original value: $HOME/.terminfo/
 set -gx TERMINFO      "$XDG_DATA_HOME/terminfo"
 set -gx TERMINFO_DIRS "$XDG_DATA_HOME/terminfo:/usr/share/terminfo"
