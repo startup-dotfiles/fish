@@ -65,9 +65,18 @@ set -gx HISTFILE "$XDG_STATE_HOME/bash_history" # history
 # original value: $HOME/.z/
 set -gx _Z_DATA "$XDG_DATA_HOME/z"
 
+# ncurses
+# original value: $HOME/.terminfo/
+set -gx TERMINFO      "$XDG_DATA_HOME/terminfo"
+set -gx TERMINFO_DIRS "$XDG_DATA_HOME/terminfo:/usr/share/terminfo"
+
 ## ----------------------------------------------------------------------------
 ## * Softwares
 ## ----------------------------------------------------------------------------
+
+## starship
+## original value: $XDG_CONFIG_HOME/starship.toml
+set -gx STARSHIP_CONFIG "$XDG_CONFIG_HOME/starship/starship.toml"
 
 ## gnupg
 # original value: $HOME/.gnupg/
@@ -121,6 +130,10 @@ set -gx SLIME_HOME "$XDG_CACHE_HOME/slime"
 ## lldb
 # https://github.com/llvm/llvm-project/issues/71426 (Open)
 # original value: $HOME/.lldb/
+
+## clang-format
+# original value: $HOME/.clang-format
+## clang-format -style=file:<format_file_path>
 
 # codeium
 # - https://github.com/Exafunction/windsurf.vim/issues/290 (Open)
