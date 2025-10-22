@@ -159,6 +159,11 @@ set -gx MOZ_LEGACY_HOME 0  # no effect
 # - https://developer.android.com/studio/run/emulator-console
 # original value: $HOME/.emulator_console_auth_token
 
+# go-musicfox
+# - https://github.com/go-musicfox/go-musicfox/pull/453
+# original value: $XDG_CONFIG_HOME/go-musicfox
+# set -gx MUSICFOX_ROOT ""   # backward compatible with older versions
+
 ## ----------------------------------------------------------------------------
 ## * Programming
 ## ----------------------------------------------------------------------------
