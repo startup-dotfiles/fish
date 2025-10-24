@@ -26,11 +26,16 @@ source $XDG_CONFIG_HOME/fish/conf.d/keybindings.fish
 ## only run in interactive shells
 if status is-interactive
     # [atuin] show shell history (TUI)
-    # atuin init fish | source
-
-    # A temp solution to suppress the deprecation warning for fish's `bind -k/--key` usage.
-    # See https://github.com/atuinsh/atuin/issues/2803
-    atuin init fish | sed 's/-k up/up/' | source
+    ## TODO: A temp solution to suppress the deprecation warning for fish's `bind -k/--key` usage.
+    ## See https://github.com/atuinsh/atuin/issues/2803
+    ##
+    # atuin init fish | sed 's/-k up/up/' | source
+    ##
+    ## NOTE: Disbale default up arrow
+    ## https://docs.atuin.sh/faq/#how-do-i-remove-the-default-up-arrow-binding
+    ## https://docs.atuin.sh/configuration/key-binding/#fish
+    atuin init fish --disable-up-arrow | sed 's/-k up/up/' | source
+    bind \ca _atuin_search # binds to ctrl-a
 
     # [zoxide] smarter cd command
     zoxide init fish | source
@@ -56,6 +61,10 @@ end
 # variables
 
 set -g fish_autosuggestion_enabled 1
+
+
+
+
 
 # ▀█▀ █░█ █▀▀ █▀▄▀█ █▀▀ █▀
 # ░█░ █▀█ ██▄ █░▀░█ ██▄ ▄█

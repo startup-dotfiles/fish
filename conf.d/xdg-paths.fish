@@ -80,27 +80,50 @@ set -gx TERMINFO_DIRS "$XDG_DATA_HOME/terminfo:/usr/share/terminfo"
 ## * Softwares
 ## ----------------------------------------------------------------------------
 
-## starship
-## original value: $XDG_CONFIG_HOME/starship.toml
-set -gx STARSHIP_CONFIG "$XDG_CONFIG_HOME/starship/starship.toml"
+# Mozilla Firefox
+# - https://phabricator.services.mozilla.com/D6995
+# - https://bugzilla.mozilla.org/show_bug.cgi?id=259356 (Open)
+# original value: $HOME/.mozilla/
+## FUCK: There is no related option.
+set -gx MOZ_LEGACY_HOME 0  # no effect
 
-## gnupg
-# original value: $HOME/.gnupg/
-set -gx GNUPGHOME "$XDG_DATA_HOME/gnupg"
-## ansible
-# original value: $HOME/.ansible/
-set -gx ANSIBLE_HOME "$XDG_DATA_HOME/ansible"
+# Zen Browser
+# - https://github.com/zen-browser/desktop/issues/7280 (Open)
+# original value: $HOME/.zen/
+## FUCK: There is no related option.
 
-## cuda
-# original value: $HOME/.nv/
-set -gx CUDA_CACHE_PATH "$XDG_CACHE_HOME/nv"
-## texlive
-# original value: $HOME/.texlive/texmf-var/
-set -gx TEXMFVAR "$XDG_CACHE_HOME/texlive/texmf-var"
+# Andorid emulator console
+# - https://developer.android.com/studio/run/emulator-console
+# original value: $HOME/.emulator_console_auth_token
+## FUCK: There is no related option.
+
+## Vscode/Vscodium
+# https://github.com/Microsoft/vscode/issues/3884 (Open)
+# original value: $HOME/.vscode-oss/
+## FUCK: There is no related option.
+
+# Codeium
+# - https://github.com/Exafunction/windsurf.vim/issues/290 (Open)
+# original value: $HOME/.codeium
+## FUCK: There is no related option.
+
 
 ## less
 # original value: $HOME/.lesshst
 set -gx LESSHISTFILE "$XDG_STATE_HOME/lesshst" # history
+
+## gnupg
+# original value: $HOME/.gnupg/
+set -gx GNUPGHOME "$XDG_DATA_HOME/gnupg"
+
+## cuda
+# original value: $HOME/.nv/
+set -gx CUDA_CACHE_PATH "$XDG_CACHE_HOME/nv"
+
+## texlive
+# original value: $HOME/.texlive/texmf-var/
+set -gx TEXMFVAR "$XDG_CACHE_HOME/texlive/texmf-var"
+
 ## node
 # original value: $HOME/.node_repl_history
 set -gx NODE_REPL_HISTORY "$XDG_STATE_HOME/node_repl_history" # history
@@ -129,40 +152,36 @@ set -gx MYSQL_HISTFILE "$XDG_STATE_HOME/mariadb_history" # history
 # original value: $HOME/.slime/
 set -gx SLIME_HOME "$XDG_CACHE_HOME/slime"
 
-## vscode/vscodium
-# https://github.com/Microsoft/vscode/issues/3884 (Open)
-# original value: $HOME/.vscode-oss/
-
 ## lldb
 # https://github.com/llvm/llvm-project/issues/71426 (Open)
 # original value: $HOME/.lldb/
+## FUCK: There is no related option
 
 ## clang-format
 # original value: $HOME/.clang-format
 ## clang-format -style=file:<format_file_path>
-
-# codeium
-# - https://github.com/Exafunction/windsurf.vim/issues/290 (Open)
-# original value: $HOME/.codeium
-
-# Mozilla Firefox
-# - https://phabricator.services.mozilla.com/D6995
-# - https://bugzilla.mozilla.org/show_bug.cgi?id=259356 (Open)
-# original value: $HOME/.mozilla/
-set -gx MOZ_LEGACY_HOME 0  # no effect
-
-# Zen Browser
-# - https://github.com/zen-browser/desktop/issues/7280 (Open)
-# original value: $HOME/.zen/
-
-# Andorid emulator console
-# - https://developer.android.com/studio/run/emulator-console
-# original value: $HOME/.emulator_console_auth_token
+## BAD: There is no related option, but at least it won't crap all over my $HOME.
 
 # go-musicfox
 # - https://github.com/go-musicfox/go-musicfox/pull/453
 # original value: $XDG_CONFIG_HOME/go-musicfox
 # set -gx MUSICFOX_ROOT ""   # backward compatible with older versions
+
+## starship
+## original value: $XDG_CONFIG_HOME/starship.toml
+set -gx STARSHIP_CONFIG "$XDG_CONFIG_HOME/starship/starship.toml"
+
+## ansible
+# original value: $HOME/.ansible/
+set -gx ANSIBLE_HOME "$XDG_DATA_HOME/ansible"
+
+# atuin
+# - https://docs.atuin.sh/configuration/config/
+# - https://docs.atuin.sh/guide/theming/
+## GOOD: The default values are fine and don’t need to be changed.
+# set -gx ATUIN_CONFIG_DIR "$XDG_CONFIG_HOME/atuin"
+# set -gx ATUIN_THEME_DIR  "$ATUIN_CONFIG_DIR/themes"
+
 
 ## ----------------------------------------------------------------------------
 ## * Programming
