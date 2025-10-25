@@ -1,4 +1,4 @@
-# Dotfiles --- fish shell
+# Dotfiles --- fish shell config
 
 ```sh
 # Backup/Rename
