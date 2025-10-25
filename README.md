@@ -4,7 +4,7 @@
 # Backup/Rename
 [ -d $HOME/.config/fish ] mv $HOME/.config/fish $HOME/.config/fish.bak
 # Clone
-git clone https://github.com/startup-dotfiles/fish $HOME/.config/fish
+git clone https://github.com/startup-dotfiles/shells.git $HOME/.config/fish
 
 # These files can be deleted after installation.
 rm -r README.md LICENSE assets/ .git/ .gitignore
